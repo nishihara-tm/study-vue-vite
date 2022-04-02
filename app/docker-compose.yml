@@ -1,0 +1,11 @@
+version: "3.4"
+services:
+  vite:
+    image: node:lts
+    ports:
+      - 3023:3000
+    working_dir: /var/app/
+    command: yarn dev
+    volumes:
+      - .:/var/app/
+    tty: true
