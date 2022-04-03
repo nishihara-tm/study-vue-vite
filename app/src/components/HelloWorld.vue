@@ -2,7 +2,9 @@
   <h1>{{ msg }}</h1>
   <p>{{ countMessage}} </p>
 
-  <button type="button" @click="count++">count is: {{ count }}</button>
+  <Button type="button" @click="count++">
+    count is: {{ count }}
+  </Button>
 </template>
 
 <script setup lang="ts">
@@ -10,6 +12,7 @@ import { computed, ref } from 'vue'
 
 defineProps<{ msg: string }>()
 const count = ref(0)
+const countMessage = computed(() => `hello world ${count.value}`)
 </script>
 
 <style scoped>

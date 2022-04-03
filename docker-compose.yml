@@ -7,5 +7,5 @@ services:
     working_dir: /var/app/
     command: yarn dev
     volumes:
-      - .:/var/app/
+      - ./app/:/var/app/
     tty: true
